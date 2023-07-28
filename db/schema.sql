@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS dish-hunt_db;
-CREATE DATABASE dish-hunt_db;
+DROP DATABASE IF EXISTS dishhunt_db;
+CREATE DATABASE dishhunt_db;
