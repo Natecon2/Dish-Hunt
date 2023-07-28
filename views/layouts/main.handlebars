@@ -11,6 +11,11 @@
   <img src="Assets/DishHunt.png">
 </div>
     <div class="nav-links">
+       {{!-- {{#if logged_in}}
+        <button class="no-button" id="logout">logout</button>
+        {{else}}
+        <a href="/login">login</a>
+        {{/if}} --}}
       <a href="#" class="login-link">Login</a>
       <a href="#" class="signup-link">Sign Up</a>
     </div>
@@ -21,5 +26,8 @@
     {{{body}}} 
   </main>
 
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
 </body>
 </html>
