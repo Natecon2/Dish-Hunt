@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Recipes</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <h1>Recipes</h1>
+    </header>
+
+    <!-- Recipe Cards -->
+    <section class="recipe-cards">
+      {{#each recipes}}
+        <div class="recipe-card">
+          <img src="{{image}}" alt="{{title}}" />
+          <h3>{{title}}</h3>
+          <button class="like-button" data-recipe="{{id}}">Like</button>
+        </div>
+      {{/each}}
+    </section>
+
+  </body>
+</html>

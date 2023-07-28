@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Food and Recipe Sharing</title>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Welcome to Dish Hunt's Food and Recipe Sharing</h1>
+    <p>Create an account and start saving your favorite recipes!</p>
+  </header>
+
+  <!-- Categories  -->
+  <section>
+    <h2>Categories</h2>
+    <div class="category-links">
+      {{#each categories}}
+        <a href="{{link}}"><img src="{{image}}" alt="{{name}}"></a>
+      {{/each}}
+    </div>
+  </section>
+
+  <!-- Introduction -->
+   <div class="welcome-message">
+      <h1>Hello and Welcome to Dish Hunt!</h1>
+      <p>
+        At Dish Hunt, we're all about sharing the love for food and recipes with our amazing community of foodies. Whether you're a seasoned chef or a cooking enthusiast, you're in the right place!
+      </p>
+      <p>
+        Don't have an account yet? Sign up now to unlock a world of benefits! With a Dish Hunt account, you can save and share your favorite recipes, follow other foodies, and be part of the culinary conversation by leaving comments on recipes you try.
+      </p>
+      <p>
+        So why wait? Let's embark on a mouthwatering journey together! Feel free to explore and search our vast collection of delicious recipes, and let the culinary adventure begin!
+      </p>
+      <p class="cta-message">Ready to get started? Join Dish Hunt now and let the flavors unite!</p>
+      <a href="#" class="signup-cta">Sign Up Now!</a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2023 Dish Hunt. All rights reserved. 😉</p>
+  </footer>
+</body>
+</html>
