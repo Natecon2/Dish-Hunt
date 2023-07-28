@@ -1,22 +1,48 @@
-<!DOCTYPE html>
 <html>
-<head>
-  <title>Dashboard - Food and Recipe Sharing</title>
-</head>
-<body>
-  <!-- Menu -->
-  <nav>
-    <ul>
-      <li><a href="#">Saved Recipes</a></li>
-      <li><a href="#">Posted Recipes</a></li>
-      <li><a href="#">Comments</a></li>
-    </ul>
-  </nav>
+  <head>
+    <title>Dashboard - Food and Recipe Sharing</title>
+  </head>
+  <body>
+    <!-- Menu -->
+    <nav>
+      <ul>
+        <li><a href="#">Saved Recipes</a></li>
+        <li><a href="#">Posted Recipes</a></li>
+        <li><a href="#">Comments</a></li>
+      </ul>
+    </nav>
 
-  <!-- Dashboard -->
-  <section>
-    <!-- need to add content for the different dashboard sections here...??? -->
-  </section>
+    <!-- Dashboard -->
 
-</body>
+    {{! saved recipes }}
+    <section>
+      <div class="saved-recipes">
+        <h2>Saved Recipes</h2>
+        <div class="recipe-cards">
+          {{#each savedRecipes}}
+            <div class="recipe-card">
+              <img src="{{thumbnail}}" alt="{{title}}" />
+              <h3 class="recipe-title">{{title}}</h3>
+              <a href="#" class="view-recipe-btn" data-recipe="{{id}}">View
+                Recipe</a>
+            </div>
+          {{/each}}
+        </div>
+      </div>
+    </section>
+
+    {{! popup window with a printable recipe from your saved recipes }}
+    <script>
+      function openPrintablePopup(recipeId) { const recipe =
+      recipesData.find((r) => r.id === recipeId); const printablePopup =
+      window.open('', '_blank', 'height=500,width=600'); const popupContent =
+      Handlebars.templates.printableRecipe(recipe);
+      printablePopup.document.write(popupContent);
+      printablePopup.document.close(); } const viewRecipeButtons =
+      document.querySelectorAll('.view-recipe-btn');
+      viewRecipeButtons.forEach((button) => { button.addEventListener('click',
+      () => { const recipeId = button.dataset.recipe;
+      openPrintablePopup(recipeId); }); });
+    </script>
+  </body>
 </html>
