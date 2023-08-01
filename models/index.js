@@ -14,5 +14,4 @@ User.hasMany(User, {
   foreignKey: 'userId'
 });
 
-module.exports = db;
-
+module.exports = { User, Recipe };
