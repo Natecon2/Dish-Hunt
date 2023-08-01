@@ -33,7 +33,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: recipe }],
+      include: [{ model: Recipe }],
     });
 
     const user = userData.get({ plain: true });
@@ -55,6 +55,11 @@ router.get('/login', (req, res) => {
   }
 
   res.render('login');
+});
+
+router.get('/signup', (req, res) => {
+  // If the user is already logged in, redirect the request to another route
+  res.render('signup');
 });
 
 module.exports = router;
