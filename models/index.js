@@ -6,10 +6,6 @@ Recipe.belongsTo(User, {
   onDelete: 'CASCADE'
 });
 
-Recipe.hasMany(models.Review, {
-  foreignKey: 'recipeId'
-});
-
 User.hasMany(User, {
   foreignKey: 'userId'
 });
