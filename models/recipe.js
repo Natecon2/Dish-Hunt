@@ -21,17 +21,7 @@ module.exports = (sequelize, DataTypes) => {
     ingredients: DataTypes.TEXT,
     procedure: DataTypes.TEXT
   });
-
-  Recipe.associate = (models) => {
-    Recipe.belongsTo(models.User, {
-      foreignKey: 'userId',
-      onDelete: 'CASCADE'
-    });
-    Recipe.hasMany(models.Review, {
-      foreignKey: 'recipeId'
-    });
-  };
-
+    
   Recipe.addHook('afterFind', async (results) => {
     if (Array.isArray(results)) {
       await Promise.all(results
