@@ -1,22 +1,25 @@
-const db = require('../config/database');
-const Recipe = require('../models/Recipe');
-const recipeSeeds = require('./recipeSeeds');
+const sequelize = require('../config/connection');
+const { User, Recipe } = require('../models');
 
-(async () => {
-    try {
-        await db.authenticate();
-        console.log('A connection to the database is successful!');
+const userData = require('./userData.json');
+const recipeData = require('./recipeData.json');
 
-        // this ensures the tables are created
-        await Recipe.sync({ force: true });
+const seedDatabase = async () => {
+  await sequelize.sync({ force: true });
 
-        // this puts the recipeSeeds data into the database
-        await Recipe.bulkCreate(recipeSeeds);
+  const users = await User.bulkCreate(userData, {
+    individualHooks: true,
+    returning: true,
+  });
 
-        console.log('Seeding completed!');
-    } catch (error) {
-        console.error('Unable to connect to the database:', error);
-    } finally {
-        db.close();
-    }
-})();
+  for (const recipe of recipeData) {
+    await Recipe.create({
+      ...recipe,
+      user_id: users[Math.floor(Math.random() * users.length)].id,
+    });
+  }
+
+  process.exit(0);
+};
+
+seedDatabase();
