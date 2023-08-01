@@ -1,0 +1,27 @@
+[
+    {
+        "title": "Delicious & Yummy Pancakes",
+        "thumbnail": "Assets/Delicious Yummy Pancakes.jpg",
+        "image": "Assets/Delicious Yummy Pancakes.jpg",
+        "ingredients": [
+            "1 cup all-purpose flour",
+            "2 tablespoons sugar",
+            "1 teaspoon baking powder",
+            "1/2 teaspoon baking soda",
+            "1/4 teaspoon salt",
+            "3/4 cup buttermilk",
+            "1/4 cup milk",
+            "1 large egg",
+            "2 tablespoons unsalted butter, melted"
+        ],
+        "instructions": [
+            "In a large bowl, whisk together flour, sugar, baking powder, baking soda, and salt.",
+            "In a separate bowl, whisk buttermilk, milk, egg, and melted butter.",
+            "Combine the wet ingredients with the dry ingredients, mixing until  combined.",
+            "Heat a lightly greased griddle or non-stick skillet over medium heat.",
+            "Pour the batter onto the griddle for each pancake.",
+            "Cook until bubbles form on the surface, then flip and cook until golden brown.",
+            "Serve warm with maple syrup and butter, with your favorite toppings."
+        ]
+    }
+]
