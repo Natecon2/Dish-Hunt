@@ -1,0 +1,165 @@
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    width: 120px;
+}
+
+.login-link-container {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }
+
+.nav-links a {
+    margin-left: 10px;
+    text-decoration: underline;
+    color: #ff8800;
+    font-size: 22px;
+    font-weight: bold;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+
+}
+
+.nav-links a:hover {
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+}
+
+header {
+    background-color: #ff880028;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+}
+
+.welcome-message p {
+    color: #1d1b1a;
+}
+
+section {
+    padding: 20px;
+}
+
+section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.category-name {
+    font-style: italic;
+    color: #000000;
+    font-family: 'Times';
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.category-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.category-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.category-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.welcome-message {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.welcome-message h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.welcome-message p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.welcome-message .cta-message {
+    font-weight: bold;
+}
+
+.signup-cta {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #ff8000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #f8f8f8;
+    text-align: center;
+    padding: 10px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+.wrapper {
+    flex: 1;
+}

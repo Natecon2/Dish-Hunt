@@ -2,38 +2,66 @@
 <html>
 <head>
   <title>Food and Recipe Sharing</title>
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
   <!-- Header -->
   <header>
-    <h1>Welcome to Dish Hunt's Food and Recipe Sharing</h1>
-    <p>Create an account and start saving your favorite recipes!</p>
+    <h1>Welcome to Dish Hunt's Food & Recipe Sharing</h1>
+    <h3>Create an account and start saving your favorite recipes!</h3>
   </header>
 
-  <!-- Categories  -->
-  <section>
-    <h2>Categories</h2>
+<!-- Categories  -->
+ <section class="categories-section">
     <div class="category-links">
-      {{#each categories}}
-        <a href="{{link}}"><img src="{{image}}" alt="{{name}}"></a>
-      {{/each}}
-    </div>
-  </section>
+      <a href="/category/main" class="category-link">
+        <img src="/assets/main.png" alt="Main" class="category-image">
+          <p class="category-name">Main</p>
 
+      </a>
+      <a href="/category/soups" class="category-link">
+        <img src="/assets/soups.png" alt="Soups" class="category-image">
+          <p class="category-name">Soups</p>
+
+      </a>
+      <a href="/category/sides" class="category-link">
+        <img src="/assets/sides.png" alt="Sides" class="category-image">
+          <p class="category-name">Sides</p>
+
+      </a>
+            <a href="/category/appetizers" class="category-link">
+        <img src="/assets/appetizers.png" alt="Appetizers" class="category-image">
+          <p class="category-name">Appetizers</p>
+
+      </a>
+      <a href="/category/desserts" class="category-link">
+        <img src="/assets/desserts.png" alt="Desserts" class="category-image">
+          <p class="category-name">Desserts</p>
+      </a>
+<a href="/category/drinks" class="category-link">
+  <img src="/assets/drinks.png" alt="Drinks" class="category-image">
+  <p class="category-name">Drinks</p>
+</a>
+
+      </a>
+
+    </div>
+  </section>    
   <!-- Introduction -->
    <div class="welcome-message">
-      <h1>Hello and Welcome to Dish Hunt!</h1>
-      <p>
+      <p style="font-size: 18px;">
         At Dish Hunt, we're all about sharing the love for food and recipes with our amazing community of foodies. Whether you're a seasoned chef or a cooking enthusiast, you're in the right place!
-      </p>
-      <p>
-        Don't have an account yet? Sign up now to unlock a world of benefits! With a Dish Hunt account, you can save and share your favorite recipes, follow other foodies, and be part of the culinary conversation by leaving comments on recipes you try.
-      </p>
-      <p>
+      <br>
+      <br>
+        Don't have an account yet? Sign up now to unlock a world of benefits! With a Dish Hunt account, you can save and share your favorite recipes and be part of the culinary conversation by leaving comments on recipes you try.
+      <br>
+      <br>
         So why wait? Let's embark on a mouthwatering journey together! Feel free to explore and search our vast collection of delicious recipes, and let the culinary adventure begin!
       </p>
-      <p class="cta-message">Ready to get started? Join Dish Hunt now and let the flavors unite!</p>
-      <a href="/signup" class="signup-cta">Sign Up Now!</a>
+      <br>
+      <br>
+      <p class="cta-message">Ready to get started? Join Dish Hunt now and let the flavors unite!</p>       <br>
+      <a href="signup.handlebars" class="signup-cta">Sign Up Now!</a>
     </div>
   </main>
 
