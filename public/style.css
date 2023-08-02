@@ -37,10 +37,21 @@ nav {
 }
 
 .login-link-container {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-  }
+    position: absolu  }
+
+.nav-links a {
+    margin-left: 10}
+
+.header-background {
+    background-image: url("assets/blueberry-peach-feta-salad.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 310px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    /* Set the text color to be visible against the background image if adding*/
+}
 
 .nav-links a {
     margin-left: 10px;
@@ -66,12 +77,22 @@ header {
 }
 
 header h1 {
-    font-size: 32px;
+    font-size: 40px;
     margin-bottom: 10px;
 }
 
-header p {
-    font-size: 18px;
+header h3 {
+    font-size: 28px;
+px;
+}
+
+header h3 {
+    font-size: 28px;
+px;
+}
+
+header h3 {
+    font-size: 28px;
 }
 
 .welcome-message p {
