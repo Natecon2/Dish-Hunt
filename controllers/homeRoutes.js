@@ -22,7 +22,7 @@ router.get('/', async (req, res) => {
     res.render('homepage', { 
       recipes, 
       logged_in: req.session.logged_in,
-      categories,
+
     });
   } catch (err) {
     res.status(500).json(err);

@@ -11,10 +11,10 @@
 </div>
     <div class="nav-links">
         {{#if logged_in}}
-        <a href="../dashboard.handlebars">Profile</a> |
+        <a href="/dashboard">Profile</a> |
         <button class="no-button" id="logout">LogOut</button>
         {{else}}
-        <a href="../login.handlebars">LogIn</a>
+        <a href="/login">LogIn</a>
         {{/if}}
     </div>
   </nav>
@@ -27,6 +27,6 @@
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
-  <script src="/js/login.js"></script> 
+
 </body>
 </html>
