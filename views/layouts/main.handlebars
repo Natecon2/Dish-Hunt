@@ -2,20 +2,19 @@
 <html>
 <head>
   <title>{{pageTitle}}</title>
-  <link rel="stylesheet" href="/styles.css"> 
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
   <!-- Navigation -->
   <nav class="navbar">
-<div class="logo">
-  <img src="Assets/DishHunt.png">
+<img class="logo" src="/assets/DishHunt.png" width="300" height="250">
 </div>
     <div class="nav-links">
         {{#if logged_in}}
-        <a href="/dashboard">profile</a> |
-        <button class="no-button" id="logout">logout</button>
+        <a href="../dashboard.handlebars">Profile</a> |
+        <button class="no-button" id="logout">LogOut</button>
         {{else}}
-        <a href="/login">login</a>
+        <a href="../login.handlebars">LogIn</a>
         {{/if}}
     </div>
   </nav>
@@ -28,5 +27,6 @@
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
+  <script src="/js/login.js"></script> 
 </body>
 </html>

@@ -6,37 +6,37 @@ const categories = [
   {
     name: 'Main',
     link: '/category/main',
-    image: '/images/main.jpg'
+    image: 'assets/main.png'
   },
   {
     name: 'Soups',
     link: '/category/soups',
-    image: '/images/soups.jpg'
+    image: 'assets/soups.png'
   },
   {
     name: 'Sides',
     link: '/category/sides',
-    image: '/images/sides.jpg'
+    image: 'assets/sides.png'
   },
   {
     name: 'Appetizers',
     link: '/category/appetizers',
-    image: '/images/appetizers.jpg'
+    image: 'assets/appetizers.png'
   },
   {
     name: 'Desserts',
     link: '/category/desserts',
-    image: '/images/desserts.jpg'
+    image: 'assets/desserts.png'
   },
   {
     name: 'Vegetarian',
     link: '/category/vegetarian',
-    image: '/images/vegetarian.jpg'
+    image: 'assets/vegetarian.png'
   },
   {
     name: 'Drinks',
     link: '/category/drinks',
-    image: '/images/drinks.jpg'
+    image: 'assets/drinks.png'
   }
 ];
 
