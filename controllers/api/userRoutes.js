@@ -1,55 +1,72 @@
-const express = require('express');
-const router = express.Router();
-
+const router = require('express').Router();
 const { User } = require('../../models');
-router.post('/register', async (req, res) => {
-  const { username, email, password } = req.body;
 
-  if (!username || !password) {
-    return res.status(400).json({ message: 'Missing required fields' });
-  }
 
-  const newUser = new User({
-    username,
-    email,
-    password,
-  });
-
+//Creates a new user when submitted through the fetch request from signupFormHandler in the login.js
+router.post('/', async (req, res) => {
   try {
-    const savedUser = await newUser.save();
-    res.status(201).json(savedUser);
+    console.log(req.body)
+    const userData = await User.create(req.body);
+
+    //saves the session as it begins through logging in the user that just signed up.
+    req.session.save(() => {
+      req.session.user_id = userData.id;
+      req.session.logged_in = true;
+
+      res.status(200).json(userData);
+    });
   } catch (err) {
-    res.status(400).json({ message: err.message });
+    res.status(400).json(err);
   }
 });
 
+
+//if a user wants to login through the login page, this function makes sure the login creds match a single user from the dn
 router.post('/login', async (req, res) => {
-  const { email, password } = req.body;
-
-  if (!email || !password) {
-    return res.status(400).json({ message: 'Missing required fields' });
-  }
-
   try {
-    const user = await User.findOne({ email });
-    if (!user || user.password !== password) {
-      return res.status(401).json({ message: 'Invalid email or password' });
+    //first, make sure that you take the email submitted by user in req matches one email, and alerts if it doesn't match. 
+    const userData = await User.findOne({ where: { email: req.body.email } });
+    console.log(userData)
+
+    if (!userData) {
+      res
+        .status(400)
+        .json({ message: 'Incorrect email or password, please try again' });
+      return;
     }
-    res.json({ message: 'Login successful', user });
+
+    //makes sure that the password from the user req matches the password of user in the db with that email. It does this through the instance of the model that is called in User.findOne.
+    const validPassword = await userData.checkPassword(req.body.password);
+
+    if (!validPassword) {
+      res
+        .status(400)
+        .json({ message: 'Incorrect email or password, please try again' });
+      return;
+    }
+
+    //starts the session and logs the user in. 
+    req.session.save(() => {
+      req.session.user_id = userData.id;
+      req.session.name =userData.name;
+      req.session.logged_in = true;
+      
+      res.json({ user: userData, message: 'You are now logged in!' });
+    });
+
   } catch (err) {
-    res.status(500).json({ message: err.message });
+    res.status(400).json(err);
   }
 });
 
-router.get('/:id', async (req, res) => {
-  try {
-    const user = await User.findById(req.params.id);
-    if (!user) {
-      return res.status(404).json({ message: 'User not found' });
-    }
-    res.json(user);
-  } catch (err) {
-    res.status(500).json({ message: err.message });
+//ends the session with logs the user out. 
+router.post('/logout', (req, res) => {
+  if (req.session.logged_in) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  } else {
+    res.status(404).end();
   }
 });
 
