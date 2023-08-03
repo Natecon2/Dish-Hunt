@@ -159,10 +159,10 @@ section h2 {
     display: inline-block;
     padding: 10px 20px;
     margin-top: 20px;
-    background-color: #ff8000;
-    color: #fff;
+    background-color: #ffffff9f;
+    color: #1100ff;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 1px;
 }
 
 .login-container {
@@ -186,8 +186,8 @@ section h2 {
 }
 
 .form.login-form {
-    padding: 50px 75px 50px 50px;
     background-color: #f8f8f8;
+    padding: 0px 75px 50px 50px;
 }
 
 .form-input {
@@ -197,9 +197,8 @@ section h2 {
 }
 
 .signup-cta {
-    background-color: rgba(255, 255, 255, 0.363);
-    padding: 10px;
-    border-radius: 1px;
+    background-color: #ff8000 padding: 10px;
+    border-radius: 5px;
 }
 
 .btn {
@@ -284,8 +283,64 @@ section h2 {
     border-radius: 5px;
 }
 
+.signup-container {
+    position: relative;
+    background-image: url("assets/signup-page.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.signup-form {
+    justify-content: center;
+    align-items: center;
+    height: 35vh;
+    /* Ensures the form takes the full height of the viewport */
+}
+
+.form.signup-form {
+    padding: 0px 75px 110px 50px;
+    background-color: #f8f8f8;
+    align-text: left;
+}
+.signup-form .form-group {
+    padding: 10px ;
+    background-color: #f8f8f8;
+
+}
+
+.signup-form label {
+    font-size: 16px;
+    font-weight: bold;
+}
 
 
+.signup-form button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #ff8800;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.centered-heading {
+    text-align: center;
+    margin-top: 50px;
+    /* Adjust the margin as needed for spacing */
+}
+
+.centered-heading h2 {
+    font-size: 28px;
+    color: #ff8800;
+    background-color: #f8f8f8;
+    padding-top: 20px;
+    text-align: center;
+}
 
 
 footer {
