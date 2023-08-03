@@ -58,12 +58,12 @@
 
 
   <!-- Search Bar -->
-  <div class="search-bar">
-    <form action="/search" method="GET">
-      <input type="text" name="query" placeholder="Search recipes..." />
-      <button type="submit">Search</button>
-    </form>
-  </div>
+        <div class="search-bar">
+            <form id="search-bar">
+                <input id="search-input" type="text" placeholder="Search..." name="search">
+                <button type="submit">search</button>
+            </form>
+        </div>
 
 <!-- Dashboard -->
 <section class="dashboard-container">
@@ -85,4 +85,5 @@
       openPrintablePopup(recipeId); }); });
     </script>
   </body>
+  <script src="./js/script.js"></script>
 </html>
