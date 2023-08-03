@@ -7,18 +7,22 @@
 <body>
 
 <!-- Navigation -->
-  <nav class="navbar">
+<nav class="navbar">
+  <div class="logo-container">
     <a href="/"> 
-    <img class="logo" src="/assets/DishHunt.png" width="350" height="300">
-    
+      <img class="logo" src="/assets/DishHunt.png" width="350" height="300">
+    </a>
+  </div>
+      
     <div class="nav-links">
-        {{#if logged_in}}
-        <a href="/dashboard">Profile</a>
-        <a href="/" id="logout">LogOut</button>
-        <br>
-        {{else}}
-        <a href="/login">LogIn</a>
-        {{/if}}
+      {{#if logged_in}}
+      <a href="/dashboard">Profile</a>
+      <br>
+      <a href="/" id="logout">LogOut</a>
+      <br>
+      {{else}}
+      <a href="/login">LogIn</a>
+      {{/if}}
     </div>
   </nav>
 

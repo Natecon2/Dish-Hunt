@@ -13,35 +13,21 @@ body {
     font-family: Arial, sans-serif;
 }
 
-nav {
-    padding: 10px 20px;
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .logo-container {
+    flex: 1;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
-.logo img {
-    width: 120px;
-}
-
-.login-link-container {
-    position: absolu
-}
-
-.nav-links a {
-    margin-left: 10
+.nav-links {
+    text-align: right;
+    /* Align the navigation links to the right */
 }
 
 .header-background {
@@ -54,21 +40,14 @@ nav {
     color: rgb(255, 255, 255);
 }
 
+
 .nav-links a {
-    margin-left: 10px;
+    margin-right: 15px;
     text-decoration: underline;
     color: #ff8800;
     font-size: 22px;
     font-weight: bold;
-    position: absolute;
-    right: 20px;
-    top: 10px;
-
-}
-
-.nav-links a:hover {
-    color: rgb(0, 0, 0);
-    text-decoration: underline;
+    display: block;
 }
 
 header {
@@ -80,11 +59,6 @@ header h1 {
     margin-bottom: 10px;
 }
 
-/* header h3 {
-    font-size: 28px;
-    px;
-}
- */
 header h3 {
     font-size: 28px;
 }
@@ -159,8 +133,8 @@ section h2 {
     display: inline-block;
     padding: 10px 20px;
     margin-top: 20px;
-    background-color: #ffffff9f;
-    color: #1100ff;
+    background-color: #ff8800;
+    color: #ffffff;
     text-decoration: none;
     border-radius: 1px;
 }
@@ -203,11 +177,13 @@ section h2 {
 }
 
 .btn {
-    padding: 8px 28px;
+    padding: 10px 20px;
+    font-size: 18px;
     background-color: #ff8800;
-    color: black;
-    font-weight: bold;
-}
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;}
 
 .btn-large {
     font-size: 15px;
@@ -295,6 +271,7 @@ section h2 {
     justify-content: center;
     align-items: center;
 }
+
 .signup-form {
     justify-content: center;
     align-items: center;
@@ -307,8 +284,9 @@ section h2 {
     background-color: #f8f8f8;
     align-text: left;
 }
+
 .signup-form .form-group {
-    padding: 10px ;
+    padding: 10px;
     background-color: #f8f8f8;
 
 }
