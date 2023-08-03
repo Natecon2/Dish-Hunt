@@ -52,7 +52,6 @@ nav {
     padding: 315px;
     text-align: center;
     color: rgb(255, 255, 255);
-    /* Set the text color to be visible against the background image if adding*/
 }
 
 .nav-links a {
@@ -199,7 +198,6 @@ section h2 {
 
 .signup-cta {
     background-color: rgba(255, 255, 255, 0.363);
-    /* Set your desired background color here */
     padding: 10px;
     border-radius: 1px;
 }
@@ -218,6 +216,77 @@ section h2 {
 .form-large {
     font-size: 16px;
 }
+
+.dashboard-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.menu-bar {
+    background-color: #000000d0;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+.menu-bar ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.menu-bar li {
+    margin-right: 20px;
+}
+
+.menu-bar a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+}
+
+.emoji {
+    margin-right: 5px;
+}
+
+.search-bar {
+    background-color: #f8f8f8;
+    padding: 50px;
+    text-align: center;
+  }
+  
+  .search-bar form {
+    display: inline-block;
+  }
+  
+  .search-bar input[type="text"] {
+    padding: 5px;
+    font-size: 16px;
+    width: 350px;
+  }
+  
+  .search-bar button {
+    padding: 7px 20px;
+    font-size: 16px;
+    background-color: #ff8800;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+
+
+
 
 footer {
     background-color: #f8f8f8;
