@@ -4,33 +4,29 @@
 <link rel="stylesheet" href="/style.css">
   </head>
   <body>
-    <!-- Menu -->
-    <nav>
-      <ul>
-        <li><a href="#">Saved Recipes</a></li>
-        <li><a href="#">Posted Recipes</a></li>
-        <li><a href="#">Comments</a></li>
-      </ul>
-    </nav>
 
-    <!-- Dashboard -->
+<!-- Menu -->
+<nav class="menu-bar">
+  <ul>
+    <li><a href="#"><span class="emoji">&#x1F60D;</span> Saved Recipes</a></li>
+    <li><a href="#"><span class="emoji">&#x1F4DD;</span> Posted Recipes</a></li>
+    <li><a href="#"><span class="emoji">&#x1F4DD;</span> Comments</a></li>
+  </ul>
+</nav>
 
-    {{! saved recipes }}
-    <section>
-      <div class="saved-recipes">
-        <h2>Saved Recipes</h2>
-        <div class="recipe-cards">
-          {{#each savedRecipes}}
-            <div class="recipe-card">
-              <img src="{{thumbnail}}" alt="{{title}}" />
-              <h3 class="recipe-title">{{title}}</h3>
-              <a href="#" class="view-recipe-btn" data-recipe="{{id}}">View
-                Recipe</a>
-            </div>
-          {{/each}}
-        </div>
-      </div>
-    </section>
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <form action="/search" method="GET">
+      <input type="text" name="query" placeholder="Search recipes..." />
+      <button type="submit">Search</button>
+    </form>
+  </div>
+
+<!-- Dashboard -->
+<section class="dashboard-container">
+  <div class="saved-recipes">
+  </div>
+</section>
 
     {{! popup window with a printable recipe from your saved recipes }}
     <script>
