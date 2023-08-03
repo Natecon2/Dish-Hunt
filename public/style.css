@@ -80,11 +80,11 @@ header h1 {
     margin-bottom: 10px;
 }
 
-header h3 {
+/* header h3 {
     font-size: 28px;
     px;
 }
-
+ */
 header h3 {
     font-size: 28px;
 }
@@ -197,7 +197,8 @@ section h2 {
 }
 
 .signup-cta {
-    background-color: #ff8000 padding: 10px;
+    background-color: #ff8000 
+    padding: 10px;
     border-radius: 5px;
 }
 

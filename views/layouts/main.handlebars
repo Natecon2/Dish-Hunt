@@ -5,14 +5,16 @@
 <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <!-- Navigation -->
+
+<!-- Navigation -->
   <nav class="navbar">
     <a href="/homepage"> 
     <img class="logo" src="/assets/DishHunt.png" width="350" height="300">
     
     <div class="nav-links">
         {{#if logged_in}}
-        <a href="/dashboard">Profile</a> |
+        <a href="/dashboard">Profile</a>
+        <br>
         <button class="no-button" id="logout">LogOut</button>
         {{else}}
         <a href="/login">LogIn</a>
