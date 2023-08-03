@@ -7,13 +7,13 @@
 <body>
   <!-- Navigation -->
   <nav class="navbar">
-    <a href="/homepage"> 
+    <a href="/"> 
     <img class="logo" src="/assets/DishHunt.png" width="350" height="300">
     
     <div class="nav-links">
         {{#if logged_in}}
-        <a href="/dashboard">Profile</a> |
-        <button class="no-button" id="logout">LogOut</button>
+        <a href="/dashboard">Profile</a>
+        <a href="/" id="logout">LogOut</button>
         {{else}}
         <a href="/login">LogIn</a>
         {{/if}}
