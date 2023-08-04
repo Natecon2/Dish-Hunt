@@ -1,4 +1,4 @@
-# DishHunt Recipe Food & Recipe Sharing
+# DishHunt Food & Recipe Sharing
 
 <br>
 
@@ -12,9 +12,7 @@
 
 * [Project Information](#project-information)
 
-* [Project Requirements](#project-requirements)
-
-* [User Story](#user-story)
+* [Breadown of Tasks and Roles](#breakdown-of-tasks-and-roles)
 
 * [Getting Started](#getting-started)
 
@@ -24,13 +22,28 @@
 
 * [License](#license)
 
-## 16 Project 2: Interactive Full-Stack Application
+<br>
 
-Projects play a key role in your journey to becoming a full-stack web developer. As you enter the last phase of the boot camp, you’ll begin to apply for development jobs. If you want to land interviews, your portfolio must feature high-quality deployed examples of your work—-and you can use your finished projects for that very purpose.
+## Project Information
 
-As your first opportunity to show employers your collaborative skills and coding abilities, this particular project will be a focal point of your portfolio. Employers want to see what you can do, but they also want to see how you work with other developers. The more examples of deployed collaborative work you have in your portfolio, the more likely you are to get an interview and a job.
+An all in one recipe storage and sharing website. Complete with nutrition facts and instructions on how to create and share your favorite meals.
+
+AS A cook in my home:
+I WANT to use a website to find, save, and share recipes that I like,
+SO THAT I can efficiently plan meals, and find old recipes all in one place.
+
+Dish Hunt is about sharing the love for food and recipes with our amazing community of foodies. Whether you're a seasoned chef or a cooking enthusiast, you're in the right place! With a Dish Hunt account, you can save and share your favorite recipes, upload and share pictures and be part of the culinary conversation by leaving comments on recipes you’ve tried, or want to try.
+
+<br>
 
 
+## Breakdown of Tasks and Roles
+
+    -   Christopher: Models
+    -   Nathan: Routes
+    -   Lavina: Views, front-end styling, ReadMe
+    -   Robert: go-between, api, and server
+<br>
 
 ## Getting Started
 
@@ -49,51 +62,27 @@ As your first opportunity to show employers your collaborative skills and coding
 > - SOURCE schema.sql;
 >
 >
-> You will need initiate the seeds files and application from the server.js file to start your back-end database by using the following command in the terminal:
+> You will need initiate the seeds files and run your server following the commands below in the terminal:
 >
 > - node seeds
 >
 > - node server.js
 > 
->When your server is up and running, open Insomnia to perform your tests
+>When your server is up and running, open Insomnia or your localhost to perform your tests
 > 
 > 
-<br>
-
-## Presentation Requirements
-
-Use this [project presentation template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing) to address the following: 
-
-* Elevator pitch: a one minute description of your application
-
-* Concept: What is your user story? What was your motivation for development?
-
-* Process: What were the technologies used? How were tasks and roles broken down and assigned? What challenges did you encounter? What were your successes?
-
-* Demo: Show your stuff!
-
-* Directions for Future Development
-
-* Links to the deployed application and the GitHub repository. Use the [Guide to Deploy with Heroku and MySQL](https://coding-boot-camp.github.io/full-stack/heroku/deploy-with-heroku-and-mysql) on The Full-Stack Blog if you need a reminder on how to deploy to Heroku.
-
-* Your presentation should follow the [Project Presentation Template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing).
-
-
-**Each member of your group** is required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository, with a unique name and a README describing the project.
-
 <br>
 
 ## Demo
 
-==>> PASTE VIDEO/GIF/PICS HERE <<==
+![HomePage Screenshot](<assets/Homepage_Screenshot .png>)
+
+<br>
+
 ## Links
 
 
-Dish Hunt Direct Link: ==>>  <a href="https://github.com/Natecon2/Dish-Hunt.git"> Dish Hunt </a>
+Dish Hunt Heroku Link: ==>>  <a href="https://dish-hunt-3a8dcdfb266a.herokuapp.com"> Dish Hunt </a>
      
 
 GitHub Repo Link:  ==>>  <a href="https://github.com/Natecon2/Dish-Hunt.git"> GitHub Repo </a>
